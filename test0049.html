@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-image: url(img/dog1.jpg);
+            width: 400px; height: 400px; float: left;
+            border: 1px solid black;
+        }
+        #bg1{background-size: auto;}
+        #bg2{background-size: 400px;}/*400px에 한변을 맞춰서*/
+        #bg3{background-size: 50%;}/*한 변만 맞춤*/
+        #bg4{background-size: 100% 100%;}
+        #bg5{background-size: contain;}
+        #bg6{background-size: cover;}
+    </style>
+</head>
+<body>
+    <div id="bg1">auto</div>
+    <div id="bg2">400px</div>
+    <div id="bg3">50%</div>
+    <div id="bg4">100% 100%</div>
+    <div id="bg5">contain</div>
+    <div id="bg6">cover</div>
+</body>
+</html>

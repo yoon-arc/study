@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{width: 100%; height: 200px;}
+        .origin{width: 100px; height:100px; border:1px solid black; float: left; margin:50px; background-color: cornflowerblue;}
+        .origin div{width: 100px; height: 100px; background-color: coral;}
+        #moveX:hover{transform: translateX(50px);}
+        #moveY:hover{transform: translateY(50px);}
+        #moveX:hover{transform: translate(50px, 50px);}
+
+        #scaleX:hover{transform: scaleX(2);}
+        #scaleY:hover{transform: scaleY(1.5);}
+        #scaleXY:hover{transform: scale(0.7);}
+
+        #rotate1:hover{transform: rotate(45deg);}
+        #rotate2:hover{transform: rotate(-45deg);}
+
+        .rotatex:hover{transform: rotateX(45deg);}
+        .perspective{perspective: 300px;}
+
+        #d_rX:hover{transform: rotateX(45deg);}
+        #d_rY:hover{transform: rotateY(45deg);}
+        #d_rZ:hover{transform: rotateZ(45deg);}
+        #d_rXYZ:hover{transform: rotate3d(1, 1, 1, 45deg);}
+
+        #skewX:hover{transform: skewX(45deg);}
+        #skewY:hover{transform: skewY(45deg);}
+        #skewXY:hover{transform: skew(45deg, -30deg);}
+
+
+   </style>
+</head>
+<body>
+    <h1>translate 평행 이동(x축, y축)</h1>
+    <div id="container">
+        <div class="origin">
+            <div id="moveX">item1</div>
+        </div>
+        <div class="origin">
+            <div id="moveY">item2</div>
+        </div>
+        <div class="origin">
+            <div id="moveXY">item3</div>
+        </div>
+    </div>
+
+    <h1>scale 확대(x축, y축)</h1>
+    <div id="container">
+        <div class="origin">
+            <div id="scaleX">item1</div>
+        </div>
+        <div class="origin">
+            <div id="scaleY">item2</div>
+        </div>
+        <div class="origin">
+            <div id="scaleXY">item3</div>
+        </div>
+    </div>
+
+    <h1>rotate 회전</h1>
+    <div id="container">
+        <div class="origin">
+            <img src="img/dog1.jpg" id="rotate1" alt="">
+        </div>
+        <div class="origin">
+            <img src="img/dog1.jpg" id="rotate2" alt="">
+        </div>
+    </div>
+
+    <h1>perspective 원근감</h1>
+    <div id="container">
+        <div class="origin">
+            <div class="rotatex">
+                <img src="img/dog1.jpg">
+            </div>
+        </div>
+        <div class="origin" class="perspective">
+            <div class="rotatex">
+                <img src="img/dog1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h1>3d rotate</h1>
+    <div id="container">
+        <div class="origin perspective">
+            <div id="d_rX">itemX</div>
+        </div>
+        <div class="origin perspective">
+            <div id="d_rY">item_Y</div>
+        </div>
+        <div class="origin perspective">
+            <div id="d_rZ">item_XY</div>
+        </div>
+        <div class="origin">
+            <div id="d_rXYZ">item_XYZ</div>
+        </div>
+    </div>
+
+    <h1>3d skew</h1>
+    <div id="container">
+        <div class="origin perspective">
+            <div id="skewX">itemX</div>
+        </div>
+        <div class="origin perspective">
+            <div id="skewY">item_Y</div>
+        </div>
+        <div class="origin">
+            <div id="skewXY">item_XY</div>
+        </div>
+    </div>
+
+</body>
+</html>

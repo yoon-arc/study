@@ -1,0 +1,51 @@
+http://127.0.0.1:5500/serverFunction?
+username=바나나
+
+http://127.0.0.1:5500/serverFunction?
+username=바나나
+&password=1234
+
+https://search.naver.com/search.naver?(네이버 서버 중 search.naver.이라는 곳이 있음. 따라서 우리가 요청한 정보를 search.naver라는 곳으로 보냄.)
+
+where=nexearch
+&sm=top_hty
+&fbm=0
+&ie=utf8
+&query=딸기
+
+&(조건)=~~이다.
+
+=>결국 유저가 입력한 것을 전부 서버로 보내서 front 페이지가 서버에 보내는 것.
+사용자가 입력한 것->쿼리->이해하는데 필요한 것들 utf8,0,  등등..
+
+
+
+http://127.0.0.1:5500/serverFunction?
+customer_type=vvip&
+username=바나나&
+password=1234
+
+<input 속성에 type password를 넣어서>
+
+http://127.0.0.1:5500/serverFunction?
+customer_type=vvip&
+username=딸기&
+password=1234
+
+
+<value, email, placeholder 등 추가>
+
+http://127.0.0.1:5500/serverFunction?
+customer_type=vvip&
+username=바나나기본&
+emailname=abc%40naver.com&
+password=1234
+
+<url, search 추가>
+http://127.0.0.1:5500/serverFunction?
+customer_type=vvip&
+username=바나나기본&
+emailname=abc%40naver.com&
+password=1234&
+query=%EC%9D%BC%EB%B3%B8&
+urlname=http%3A%2F%2Fnaver.com

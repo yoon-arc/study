@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        label{
+            float: left;
+            width: 110px;}
+        #btn-fieldset{text-align: center;}
+        
+        /* button{
+            display: block;
+            margin: auto;
+        } */
+
+        input[required]{border: 1px solid red;}
+        input[readonly]{border: none;}
+        input:not([type=radio]){width: 200px;}
+
+        fieldset:last-of-type{border: none;}
+        button{ padding: 3px 5px; background-color: gray; color: white; border-radius: 10px;}
+        button:hover{background-color: black;}
+
+    </style>
+</head>
+<body>
+    <h1>form design</h1>
+    <p>p324~, p334~, p348~</p>
+
+    <form action="" id="signup">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="userId">아이디</label>
+                    <input type="text" name="userId" id="userId" required autofocus>
+                </li>
+                <li><label for="userPw">비밀번호</label>
+                    <input type="password" name="userPw" id="userPw" required></li>
+                <li>
+                    <label for="userPw2">비밀번호 확인</label>
+                    <input type="password" name="userPw2" id="userPw2" required>
+                </li>
+                <li>
+                    <label for="userLv">회원 등급</label>
+                    <input type="text" value="준회원" name="userLv" readonly> 
+                </li>
+            </ul>
+
+            
+        </fieldset>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="userName">이름</label>
+                    <input type="text" name="userName" id="userName" required placeholder="5자미만 공백없이">
+                </li>
+                <li>
+                    <label for="userEmail">메일 주소</label>
+                    <input type="email" name="userName" id="userEmail" required placeholder="abdc@domain.com">
+                </li>
+                <li>
+                    <label for="userTel">연락처</label>
+                    <input type="tel" name="userName" id="userTel">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset id="btn-fieldset">
+            <button>제출</button>
+        </fieldset>
+
+    </form>
+</body>
+</html>

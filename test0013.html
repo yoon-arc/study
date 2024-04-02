@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!--serverFunction은 임의의 이름으로, 나중에 별도로 연결해야함.-->
+    <form action="serverFunction" method="get">
+        <input type="hidden" name="customer_type" value="vvip">
+        <input type="text" name="username" value="바나나기본">
+        <input type="email" name="emailname" placeholder="test@test.com">
+        <input type="password" name="password">
+        <input type="search" name="query">
+        <input type="url" name="urlname">
+        <input type="submit">
+    </form>
+
+    <!--http://127.0.0.1:5500/serverFunction?username=바나나&password=1234-->
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(/img/cloud.jpg) no-repeat fixed;
+            background-size: cover;
+        }
+        #div1{color: yellow; font-size: 15vw;}
+
+        @media screen and (max-width:1024px){
+
+            body{
+            background: url(/img/cloud2.jpg) no-repeat fixed;
+            background-size: cover;}
+            
+            #div2{color: coral; font-size: 15vw;}
+        }
+
+        @media screen and (max-width:412px){
+
+        body{
+        background: url(/img/cloud3.jpg) no-repeat fixed;
+        background-size: cover;}
+
+        #div3{color:cornflowerblue; font-size: 15vw;}
+        }
+
+
+        @media screen and (max-width:391px){
+
+        body{
+        background: url(/img/cloud4.jpg) no-repeat fixed;
+        background-size: cover;}
+
+        #div4{color: yellow; font-size: 15vw;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">대화면 확인 장치</div>
+    <div id="div2">중화면 확인용</div>
+    <div id="div3">소화면 확인용</div>
+    <div id="div4">초소형 확인 장치</div>
+</body>
+</html>

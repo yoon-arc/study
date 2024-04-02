@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            /* grid-template-columns: 2fr 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr; */
+            /* grid-template-rows: 100px 200px;
+            border: 1px solid black; */
+
+            /* grid-template-columns:repeat(3, 1fr);
+            grid-template-rows: 200px; 이거 나중에 다시 확인 요망. 아마 높이 200px을 3번 반복하는 걸로 된듯*/
+
+            /* grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: minmax(200px, auto); */
+            
+            grid-template-columns: repeat(auto-fit, 200px);
+            
+            grid-template-rows: repeat(auto-fill, 200px);
+
+            .item{height: 200px}
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">Lorem 001 </div>
+        <div class="item">Pasta 002</div>
+        <div class="item">Pommes 003</div>
+        <div class="item">Lauchen 004</div>
+        <div class="item">Brotchen 005</div>
+    </div>
+</body>
+</html>

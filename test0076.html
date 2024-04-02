@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+            grid-gap: 1rem;
+        }
+        /*그리드는 전체 카드를 관리하는데 사용*/
+
+        header, figure, p{display: flex; justify-content: center;}
+        .card img{width: 100px;}
+        .card{background-color: white;}
+        
+        /*justify-content등을 사용하기 위해 flex를 줌*/
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header><h3>간장새우장</h3></header>
+            <figure><img src="img/간장새우장.jpg" alt=""></figure>
+            <p>간장새우장 500g 개꿀맛</p>
+        </div>
+        <div class="card">
+            <header><h3>새우감바스</h3></header>
+            <figure><img src="img/새우감바스.jpg" alt=""></figure>
+            <p>새우감바스 개꿀맛</p>
+        </div>
+        <div class="card">
+            <header><h3>새우구이</h3></header>
+            <figure><img src="img/새우구이.jpg" alt=""></figure>
+            <p>새우구이 500g 개꿀맛. 소금치면 더 좋다.</p>
+        </div>
+        <div class="card">
+            <header><h3>새우머리버터구이</h3></header>
+            <figure><img src="img/새우머리버터구이.jpg" alt=""></figure>
+            <p>새우머리버터구이 개꿀맛</p>
+        </div>
+        <div class="card">
+            <header><h3>시고르자브종</h3></header>
+            <figure><img src="img/dog1.jpg" alt=""></figure>
+            <p>귀여워서 팁</p>
+        </div>
+        <div class="card">
+            <header><h3>시고르자브종</h3></header>
+            <figure><img src="img/dog1.jpg" alt=""></figure>
+            <p>귀여웡</p>
+        </div>
+    </div>
+</body>
+</html>

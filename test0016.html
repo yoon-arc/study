@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자 관련 입력</h1>
+    <form action="">
+        <fieldset>
+            <h1>숫자 관련 입력</h1>
+            <input type="number" name="many_number" min="0" max="20"> 개
+            <input type="range" name="many_range" min="10" max="20" step="5" value="15">개
+        </fieldset>
+        <fieldset>
+            <h1>날짜 관련 입력</h1>
+            <input type="date" name="date" min="2024-03-20" max="2024-08-06">
+            <input type="month" name="month">
+            <input type="week" name="week">
+        </fieldset>
+        <fieldset>
+            <h1>시간 관련 입력</h1>
+            <input type="time" name="time">
+            <input type="datetime" name="datetime">
+            <input type="datetime-local" name="datetime-local">
+        </fieldset>
+
+        <input type="submit">
+        
+    </form>
+</body>
+</html>
+
+<!-- http://127.0.0.1:5500/test0016.html?
+many_number=4&
+many_range=15&
+date=2024-03-20&
+month=2024-03&
+week=2024-W12 -->
+
+http://127.0.0.1:5500/test0016.html?
+many_number=&
+many_range=15&
+date=&month=&week=&time=11%3A49&datetime=&
+datetime-local=2024-03-25T11%3A49

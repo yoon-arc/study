@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navi ul{list-style: none;}
+        .navi li{float: left;}
+        .navi a{padding: 20px; text-decoration: none; color: black;}
+        .navi a:hover{color:pink;}
+        .navi a:active{background-color: cornflowerblue;}
+        .content{clear:both;}
+
+        #intro:target, #room:target{background-color: aqua;}
+        textarea:disabled{background-color: cadetblue;}
+
+        #roomType{list-style: none;}
+        input:checked + label{color: red;}
+        /* input[type=text], input[type=tel]{border:1px solid blue;} */
+        input:not([type=radio],[type=text]){border:1px solid blue;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="navi">
+                <ul>
+                    <li><a href="#intro">이용 안내</a></li>
+                    <li><a href="#room">객실 소개</a></li>
+                    <li><a href="#fee">예약 방법 및 요금</a></li>
+                    <li><a href="#reserve">예약하기</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <div id="intro">
+                    <h2>이용 안내</h2>
+                    <p>이용 안내~~~~~~~</p>
+                </div>
+                <div id="room">
+                    <h2>객실 소개</h2>
+                    <p>객실 소개~~~~~~~</p>
+                </div>
+                <div id="fee">
+                    <h2></h2>
+                    <p></p>
+                </div>
+                <div class="reserve">
+                    <h2></h2>
+                    <form action="">
+                        <fieldset>
+                            <textarea disabled cols="30" rows="10">약관~~~</textarea>
+                            <br>
+                            <label for="customer_name">고객명</label>
+                            <input type="text" name="customerName" id="customer_name">
+                            <br>
+                            <label for="tel_num">전화번호</label>
+                            <input type="tel" name="telNum" id="tel_num">
+
+                            <ul id="roomType">
+                                <li>
+                                    <input type="radio" name="room" id="basic">
+                                    <label for="basic">기본형(최대 2인)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="room" id="family">
+                                    <label for="family">가족형(최대 8인)</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <a href="http://www.daum.com">다음으로</a>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+
+</body>
+</html>
