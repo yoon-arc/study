@@ -22,9 +22,65 @@
 
     //변수_배열
     var scorePoints = [80,70,60];
+    console.log("배열:", scorePoints);
+    console.log(scorePoints.length);
+    console.log(scorePoints[0]); //배열 index 0부터 시작
 
     //변수_객체
     var student = {name : "yoonjung ", major : "Design"}
+    console.log(student);
+
+    //변수_복합
+    var exUndefined;
+    console.log("typeof_exUndefined", typeof(exUndefined));
+
+    var exNull;
+    if (exNull === null){
+        console.log("Null 검출");
+    }else{
+        console.log("Null 아님")
+    }
+
+
+    console.log("5%3:", 5%3 );
+    for(let i = 1; i<= 10; i++){
+        if(i % 3 == 0){
+            document.write("<span> 짝</span>");
+
+        }else{
+            document.write("<span>"+i+"</span>");
+        }
+    }
+
+    var a = 10;
+    var b = a++ + 5;
+    console.log("a:",a); //b: 15 = 10 + 5
+    console.log("b:",b); //a: 11 이후 11로 증가.
+   
+    var a = 10;
+    var b = ++a + 5;
+    console.log("a:",a); //a: 먼저 11로 증가
+    console.log("b:",b); //b: 16 = 11 + 5
+
+    //대안
+    var a = 10;
+    a++;
+    var b = a + 5;
+
+    //비교 연산자
+    //=
+    //3 == "3" true type이 달라도 컨텐츠가 같아서 그냥저냥 ok
+    // var a = 3;
+    // var b = "3";
+    // a == b;
+
+    // ===
+    // 3 === "3" false 컨텐츠는 같아도 type은 다름.
+
+
+    //=<가 아닌 <=인 이유는, 데이터 흐름이 왼쪽에서 오른 쪽이라.
+
+
 
 
   </script>
