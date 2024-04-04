@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>for 반복문</h1>
+    <script>
+    var sumVal = 0;
+    for(var i =  0; i < 6; i++){
+        document.write(`<p>현재 i는 ${i}입니다.</p>`);
+            sumVal = sumVal + i;
+        }
+
+        document.write(`<p>현재 sumVal은 ${sumVal}입니다.</p>`)
+    </script>
+
+
+    <h1>while 반복문</h1>
+    <script>
+    var sumVal = 0;
+    //for(var i =  0; i < 6; i++){
+    var i =  0;
+    while(i < 6){
+    document.write(`<p>현재 i는 ${i}입니다.</p>`);
+    sumVal = sumVal + i;
+    i++;
+    }
+
+    document.write(`<p>현재 sumVal은 ${sumVal}입니다.</p>`);
+    </script>
+
+    <h1>do-while 반복문(현대에선 사라지는 추세)</h1>
+    <script>
+        var sumVal = 0;
+         var userNumber = 0;
+        do{
+           userNumber = parseInt(prompt("자연수 입력하세요. 마치려면 0 입력"));
+            sumVal += userNumber;
+        }while(userNumber > 0)
+        document.write(`<p>현재 sumVal는 ${sumVal}입니다.</p>`);
+        </script>
+
+    <h1>break vs continue</h1>
+    <p>멈추는 break, 건너뛰는 continue</p>
+    <script>
+        var myCount = 0;
+        var isSick = 0;
+
+        for(var day = 1; day <= 90; day++){
+            isSick++; //날짜수 계산
+            if (isSick % 10 === 0) continue; //내가 열흘에 한번 아프다면?
+            if (isSick >= 80) break; // 내가 80일 이후부터 수업에 안나온다면?
+            myCount++; //나의 출석수. 위에 isSick으로 인해 방해된 날짜를 반영하려면 myCount를 제일 밑에 넣어야만!
+        }
+        document.write(`<p>나는 ${myCount}일 참여 했어요.</p>`)
+        document.write(isSick);
+        document.write(day);
+    </script>
+
+<script>
+    var myDayCount = 0;
+    var myTimeCount = 0;
+    for(var day = 1; day <= 90; day++){
+        for(var time = 1; time<=8; time++){
+            myTimeCount++;
+        }
+        myDayCount++; //나의 출석수. 위에 isSick으로 인해 방해된 날짜를 반영하려면 myCount를 제일 밑에 넣어야만!
+    }
+    document.write(`<p>나는 ${myDayCount}일 참여 했어요.</p>`)
+    document.write(`<p>나는 ${myTimeCount}시간 참여 했어요.</p>`)
+
+</script>
+
+<script>
+    // for(var i = 2; i <= 9; i++){ 웬만하면 i,j,k가 아닌 알아보기 쉬운 문자로!
+        for(dan = 1; dan <= 9; dan++){
+        document.write(`<h1>${dan}단</h1>`)
+    //for(var j = 1; j <= 9; j++){
+            for(var gopsu = 1; gopsu <= 9; gopsu++){
+                document.write(`<p>${dan} x ${gopsu} = ${dan*gopsu}</p>`)
+            }
+    }
+</script>
+
+</body>
+</html>
