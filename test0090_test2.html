@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var Num = 0;
+        var star = '<span>*</span>'
+
+       for(var j = 1; j <= 7; j++){ //행
+        for(var i = 1; i <= 7; i++){ //열
+            if(i <= j){ //열이 행보다 작을 때 i 출력
+                document.write(`<span>${i}</span>`);
+            }else{ //그렇지 않을 때 star 출력
+                document.write(star);
+            }
+            
+        }document.write('<br>');
+    }
+    </script>
+
+    <script>
+        for(var hang=1; hang<=7; hang++){
+            for(var yeol=1; yeol<=hang; yeol++){
+                document.write(`<span>${yeol}</span>`);
+            }
+        for(var yeol=1; yeol<=7-hang; yeol++){
+            document.write(`<span>*</span>`)
+        }document.write("<br>");
+        }
+    </script>
+
+    <script>
+        for(i = 1; i <= 7; i++){
+            for(j = 1; j <= 7; j++){
+                if(j < i){
+                    document.write(`<span>*</span>`);
+                }else{
+                    document.write(`<span>${j}</span>`);
+                }
+            }document.write('<br>');
+        }
+    </script>
+</body>
+</html>

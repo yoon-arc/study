@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //3중 중첩 반복문
+        //(a*a)+(b*b)=(c*c) 조건이 성립하는 이상 반복해야함
+        //a*a = c*c - b*ba = 1; a <= 100; a++
+        //b*b = c*c - b*b
+        
+        // for(i = 1; i <= 7; i++){
+        //     for(j = 1; j <= 7; j++){
+        //         if(j < i){
+        //             document.write(`<span>*</span>`);
+        //         }else{
+        //             document.write(`<span>${j}</span>`);
+        //         }
+        //     }document.write('<br>');
+        // }
+
+
+       
+        var count = 0;
+        
+        for(a = 1; a <= 100; a++){
+            for(b = 1; b <= 100; b++){
+                for(c = 1; c<= 100; c++){
+                    var al = a**2;
+                    var bl = b**2;
+                    var cl = c**2;
+                    if(al + bl === cl){
+                        count++;
+                    }
+                }
+            } 
+        }document.write(`<p>총 ${count}개의 조합이 존재합니다.</p>`);
+
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // var userNum = parseInt(prompt("값을 입력해주세요."));
+        // var min = userNum
+        // var max =
+        // var average =  userNum/i ;
+        // //입력한 값들 중
+    //     var min = 0; //최소값이 계속 0으로 뜨는 에러(최소값이 입력 안됨)
+    //     var max = 0;
+    //     var sum = 0;
+    //     var count = 1;
+
+    //     var startNum = parseInt(prompt("값을 입력해주세요.")); //아래 반복문 시작 구문
+    //     if(startNum > 0){
+    //         while(true){
+    //             var num = parseInt(prompt("값을 입력해주세요."));
+
+    //             if(num === 0){
+    //                 alert("0이 입력되어 끝이 납니다."); 
+    //                 document.write(`최소값:${min} 최대값:${max} 평균값:${sum/count}`);
+    //                 break;
+    //             }
+    //             if(num > 0){
+    //                 count ++;
+    //                 if(min > num) min = num;
+    //                 if(max < num) max = num;
+    //                 sum += num;
+    //             }
+    //         }
+    //     }else if(startNum == 0){
+    //                     alert("0이 입력되어 끝이 납니다."); 
+                  
+    //     }else{
+    //           alert("다시 입력해보세요.");
+    //     }
+    //
+    
+// 사용자로부터 4.양수(자연수)를 받아들이는 반복문을 작성한다. 
+// 프로그램은 입력된 값들의 1.평균, 2.최소값, 3.최대값 을 출력한다.
+// 사용자가 0을 입력하면 반복은 종료된다. prompt로 0 입력 이전까지 계속 입력
+
+
+        min = 0;
+        max = 0;
+        sum = 0;
+        count = 0;
+
+        var startNum = parseInt(prompt("자연수를 입력하세요."));
+        if(startNum > 0){
+            while(true){
+                var num = parseInt(prompt("자연수를 입력해주세요."));
+                
+                if(num > 0){
+                    count++;
+                    if(num < min) min = num;
+                    if(num > max) max = num;
+                    sum += num
+                }
+                if(num === 0){
+                    avg = sum/count;
+                    document.write("0이 입력되었기에 계산을 종료합니다.<br>")
+                    document.write(`최소값: ${min} 최대값: ${max} 평균값: ${avg}`);
+                    break;
+                }
+                if(num < 0){continue;}
+                      
+            }
+
+        }else{
+            alert("다시 입력해주세요.");
+        } //min 값이 0으로 뜨는 오류 발생
+    
+    
+    </script>
+<!-- 
+    var userNum = 0;
+    var minVal = 0;
+    var maxVal = 0;
+    var sumVal = 0;
+    var countVal = 1;
+
+    sumVal = maxVal = minVal = parseInt(prompt("자연수 입력"));
+    if(sumVal > 0){
+        while(true){
+            userNum = parseInt(prompt("자연수 입력"));
+            if(userNum == 0){
+                document.write(`<p>최대:${maxVal}, 최소:${minVal}, 평균:${sumVal/countVal}</p>`)
+                break;
+            }
+            if(userNum < 0) continue;
+            countVal++;
+            if(minVal > userNum) minVal = userNum;
+            if(maxVal < userNum) maxVal = userNum;
+            sumVal += userNum;
+
+        }
+    }
+    else if(sumVal == 0){
+        document.write("<p>바로 끝내네..</p>");
+    }else{
+        document.write("<p>음수 입력 하지 말구..</p>");
+    }
+     -->
+
+    
+
+
+</body>
+</html>

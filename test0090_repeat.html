@@ -61,30 +61,31 @@
         document.write(day);
     </script>
 
-<script>
-    var myDayCount = 0;
-    var myTimeCount = 0;
-    for(var day = 1; day <= 90; day++){
-        for(var time = 1; time<=8; time++){
-            myTimeCount++;
-        }
-        myDayCount++; //나의 출석수. 위에 isSick으로 인해 방해된 날짜를 반영하려면 myCount를 제일 밑에 넣어야만!
-    }
-    document.write(`<p>나는 ${myDayCount}일 참여 했어요.</p>`)
-    document.write(`<p>나는 ${myTimeCount}시간 참여 했어요.</p>`)
-
-</script>
-
-<script>
-    // for(var i = 2; i <= 9; i++){ 웬만하면 i,j,k가 아닌 알아보기 쉬운 문자로!
-        for(dan = 1; dan <= 9; dan++){
-        document.write(`<h1>${dan}단</h1>`)
-    //for(var j = 1; j <= 9; j++){
-            for(var gopsu = 1; gopsu <= 9; gopsu++){
-                document.write(`<p>${dan} x ${gopsu} = ${dan*gopsu}</p>`)
+    <script>
+        var myDayCount = 0;
+        var myTimeCount = 0;
+        for(var day = 1; day <= 90; day++){
+            for(var time = 1; time<=8; time++){
+                myTimeCount++;
             }
-    }
-</script>
+            myDayCount++; //나의 출석수. 위에 isSick으로 인해 방해된 날짜를 반영하려면 myCount를 제일 밑에 넣어야만!
+        }
+        document.write(`<p>나는 ${myDayCount}일 참여 했어요.</p>`)
+        document.write(`<p>나는 ${myTimeCount}시간 참여 했어요.</p>`)
+
+    </script>
+
+    <script>
+        // for(var i = 2; i <= 9; i++){ 웬만하면 i,j,k가 아닌 알아보기 쉬운 문자로!
+            for(dan = 1; dan <= 9; dan++){
+            document.write(`<h1>${dan}단</h1>`)
+        //for(var j = 1; j <= 9; j++){
+                for(var gopsu = 1; gopsu <= 9; gopsu++){
+                    document.write(`<p>${dan} x ${gopsu} = ${dan*gopsu}</p>`)
+                }
+        }
+    </script>
+
 
 </body>
 </html>
