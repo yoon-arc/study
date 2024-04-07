@@ -48,14 +48,15 @@
 // 사용자가 0을 입력하면 반복은 종료된다. prompt로 0 입력 이전까지 계속 입력
 
 
-        min = 0;
-        max = 0;
-        sum = 0;
-        count = 0;
+        var min = Infinity;
+        var max = 0;
+        var sum = 0;
+        var count = 0;
+        var startNum = true;
 
-        var startNum = parseInt(prompt("자연수를 입력하세요."));
-        if(startNum > 0){
-            while(true){
+        
+
+            while(startNum){
                 var num = parseInt(prompt("자연수를 입력해주세요."));
                 
                 if(num > 0){
@@ -68,16 +69,13 @@
                     avg = sum/count;
                     document.write("0이 입력되었기에 계산을 종료합니다.<br>")
                     document.write(`최소값: ${min} 최대값: ${max} 평균값: ${avg}`);
-                    break;
+                    startNum = false;
                 }
                 if(num < 0){continue;}
                       
             }
 
-        }else{
-            alert("다시 입력해주세요.");
-        } //min 값이 0으로 뜨는 오류 발생
-    
+   
     
     </script>
 <!-- 
