@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       
+       var height = 19.4;
+       var frog = 0;
+       var trap = true;
+       var days = 0;
+        
+       while(trap){
+        frog += 3;
+        if(height <= frog ){
+            trap = false;
+            break;
+        }else{
+            frog -= 2;
+            days++;
+        }
+       }document.write(`총 ${days}일이 결렸습니다.`)
+
+    </script>
+</body>
+</html>
+
+<!-- while(num>1){
+    if(num % 2 == 0){num /= 2;}
+    else{nu, = (num * 3 + 1)/2;}
+    count++; -->

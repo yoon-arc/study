@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비동기 프로그램</h1>
+    <script>
+        function dispA(){console.log("A");}
+        function dispB(){console.log("B");}
+        function dispB2(){setTimeout(()=>{console.log("B2");}, 2000);}
+        //원래는 위에서 아래부터 차근차근 읽는 건데, 언어 생태계를 고려했을 때
+        //이렇게 시간을 늦춰서 출력 속도를 늦추거나 호이스팅처럼 변수를
+        //나중에 정의해도 되는 언어는 몹시 골치아프다.
+        //순서 지멋대로 하고.. 변수 정의 위치도 지 멋대로.
+        function dispC(){console.log("C");}
+        function process1(){
+            dispA();
+            dispB();
+            dispC();
+        }
+        function process2(){
+            dispA();
+            dispB2();
+            dispC();
+        }
+        process1();
+        process2();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{border: 1px solid black; border-collapse:collapse;}
+       
+    </style>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+
+        var totalNum = parseInt(prompt("총 몇 명인가요?"));
+        var colNum = parseInt(prompt("한 줄에 몇 명 앉나요?"));
+        
+       
+    
+            if(totalNum % colNum === 0){
+                line = parseInt(totalNum/colNum);
+            }else{
+                line = parseInt(totalNum/colNum) + 1;
+            }
+            
+            document.write("<table>");
+                for(var row = 0; row < line; row++){
+                    document.write("<tr>");
+                        for(var col = 0; col< colNum; col++){
+                            //좌석번호
+                            seatNo = (col + 1) + row * colNum;
+                            if(seatNo > totalNum) break;
+                            document.write(`<td id="seat${seatNo}">`);
+                            document.write(`좌석 ${seatNo}`);
+                            document.write("</td>");
+                        }
+                }document.write("</tr>");
+        document.write("</table>");
+
+
+
+
+            var mySeatNum = parseInt(prompt("어디 앉을래?"));
+            var mySeat = document.querySelector(`#seat${mySeatNum}`);
+            mySeat.onclick = function(){
+                mySeat.style.color = "white";
+                mySeat.style.background = "blue";
+            }
+
+    </script>
+</body>
+</html>

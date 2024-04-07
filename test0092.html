@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1; // 지역 변수
+        b = 1; // 전역 변수
+
+        function calNum(){
+            var sum = 10 + 20; //함수 안에만 선언 되어 있어서 밖에서는 호출이 안됨.
+            mul = 10 * 2;
+
+        }
+        calNum();
+        console.log("mul:",mul);
+        //에러 유발자 : console.log("sum:",sum);
+        
+
+        //var은 hoisting이 된다.
+        console.log("varHoist:", varHoist);
+        var varHoist = "지각쏘리ㅋㅋ";
+        console.log("varHoist:", varHoist);
+        //글로벌은 hoist가 안돼서 에러가 뜬다.
+        // console.log("globalHoist:", globalHoist);
+        // globalHoist = "지각쏘리ㅋㅋ";
+        // console.log("globalHoist:", globalHoist);
+
+        var a = 10;
+        console.log("a/2:", a/2);
+        var a = "hello"; //에러가 나지 않은 이유는
+        console.log("a/2:", a/2);
+
+
+        var secretNumber = "originalServerAddress";
+        var secretNumber = "hackersNumber";
+        {
+        let a = 10;
+        a = 100;
+        console.log("let a/2:", a/2);
+        }
+        {
+        let a = "hello"; //에러가 나지 않은 이유는
+        console.log("let a/2:", a/2);
+        }
+
+    </script>
+</body>
+</html>
