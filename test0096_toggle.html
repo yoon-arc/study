@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/toggle_off.png" onclick="toggle()" id="btn">
+    
+
+    <script>
+        let btnStatus = false; //상태 변수를 잘 활용하라!
+        function toggle(){ //현재 상태는 꺼져있는 것을 고려
+            if(btnStatus == false){
+            document.querySelector("#btn")
+            .setAttribute("src", "img/toggle_on.png");
+            btnStatus = true;
+            }
+            else{
+                document.querySelector("#btn")
+                .setAttribute("src", "img/toggle_off.png");
+                btnStatus = false;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
+

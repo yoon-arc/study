@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item{
+            width: 300px;
+            box-sizing: border-box;
+        }
+        #item img{
+            width: 300px;
+        }
+        #desc{
+            display: none;
+        }
+        #open{
+            background-color: rgba(240, 248, 255, 0.507);
+            position: absolute; top: 260px; left: 5px;
+            border: solid 1px black;
+            padding: 3px;
+        }
+        #close{
+            display: none;
+            background-color: rgba(240, 248, 255, 0.507);
+            position: absolute; top: 260px; left: 5px;
+            border: solid 1px black;
+            padding: 3px;
+        }
+        #item{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="/img/dog1.jpg" alt="dog" style="z-index: -2;">
+        <button id="open" onclick="showDetail()">상세 설명 보기</button>
+        <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        <div id="desc">
+            <h1>등심 붓꽃</h1>
+            <p>북아메리카의 붓꽃은 어쩌구 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 </p>
+        </div>
+    </div>
+    <script>
+        function showDetail(){
+            document.querySelector("#close").style.display = 'block';
+            document.querySelector("#open").style.display = 'none';
+            document.querySelector("#desc").style.display = 'block';
+        }
+        function hideDetail(){
+            document.querySelector("#close").style.display = 'none';
+            document.querySelector("#open").style.display = 'block';
+            document.querySelector("#desc").style.display = 'none';
+        }
+    </script>
+</body>
+</html>

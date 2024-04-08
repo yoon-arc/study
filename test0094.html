@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNumber(num1, num2){ //num1, num2: 매개 변수
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        let result = addNumber(2,3) // 2, 3: 인수
+        console.log(result);
+
+        function PrintMe(name,age, major = "디자인"){
+            console.log(`내 이름은 ${name}입니다. 저는 ${age}살이고 전공은 ${major}.`)
+        }
+        PrintMe("최윤정" , 24, "디자인");
+        PrintMe("최윤정" , 24);
+        PrintMe("최윤정" , 24, "피아니스트");
+
+
+
+
+
+
+        function PrintMe2(name, major = "디자인", age){
+            console.log(`내 이름은 ${name}입니다. 저는 ${age}살이고 전공은 ${major}.`)
+        }
+        PrintMe2("최윤정", "디자인" , 24);
+        //내 이름은 최윤정입니다. 저는 24살이고 전공은 디자인.
+        PrintMe2("최윤정", 24);
+        //내 이름은 최윤정입니다. 저는 undefined살이고 전공은 24.
+
+
+        //익명 표현
+        const addNumber2 = function (num1, num2){ //num1, num2: 매개 변수
+            let sum = num1 + num2;
+            return sum;
+        } //제일 ES6 같은 느낌
+
+        const result2 = addNumber2(2,3) // 2, 3: 인수
+        console.log(result2);
+
+        //즉시 실행 함수
+        (function (){
+           var userName = prompt("이름?");
+           console.log(userName); 
+        }());
+
+        const addNumber3 = (num1, num2)=>{ //num1, num2: 매개 변수
+            let sum = num1 + num2;
+            return sum;
+        } //제일 ES6 같은 느낌, 화살표 함수
+
+        const addNumber4 = ()=>{ //num1, num2: 매개 변수
+            let num1 = 1;
+            let num2 = 2;
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        //매개 변수가 없는 화살표 함수
+        const addNumber5 = ()=> 1+2;
+
+
+        const addNumber6 = (num1)=>{
+            let num2 = 2;
+            let sum = num1 + num2;
+            return sum;
+        }
+    </script>
+</body>
+
+</html>

@@ -29,6 +29,8 @@
         // globalHoist = "지각쏘리ㅋㅋ";
         // console.log("globalHoist:", globalHoist);
 
+
+        //var 재정의
         var a = 10;
         console.log("a/2:", a/2);
         var a = "hello"; //에러가 나지 않은 이유는
@@ -37,6 +39,9 @@
 
         var secretNumber = "originalServerAddress";
         var secretNumber = "hackersNumber";
+
+
+        //let은 재정의 금지(let: 블록{} 범위를 가짐)
         {
         let a = 10;
         a = 100;
@@ -46,6 +51,9 @@
         let a = "hello"; //에러가 나지 않은 이유는
         console.log("let a/2:", a/2);
         }
+
+        const secretNumber = "originalServerAddress";
+        const secretNumber = "hackersNumber";
 
     </script>
 </body>

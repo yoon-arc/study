@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc{
+            display: none;
+        }
+        #item{
+            width: 300px;
+        }
+        #item img{
+            width: 300px;
+        }
+        #open{
+            background-color: rgba(240, 248, 255, 0.507);
+            position: absolute; top: 10px; left: 5px;
+            border: solid 1px black;
+            padding: 3px;
+        }
+
+        #item{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="/img/dog1.jpg" alt="dog" style="z-index: -2;">
+        <button id="open" onclick="toggle()">상세 설명 보기</button>
+        <div id="desc">
+            <h1>등심 붓꽃</h1>
+            <p>북아메리카의 붓꽃은 어쩌구 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 </p>
+        </div>
+    </div>
+    
+
+    <script>
+        let descStatus = false; //상태 변수를 잘 활용하라!
+        function toggle(){ //현재 상태는 꺼져있는 것을 고려
+            if(descStatus == false){
+            document.querySelector("#desc").style.display = 'block';
+            document.querySelector("#open").innerText = "상세 설명 닫기";
+            descStatus = true;
+            }
+            else{
+                document.querySelector("#desc").style.display = 'none';
+                descStatus = false;
+                document.querySelector("#open").innerText = "상세 설명 보기";
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
+
