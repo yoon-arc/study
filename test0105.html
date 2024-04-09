@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openPop4()">팝업 4세 오픈</button>
+    <script>
+        window.open("test0105_popup.html", "", "width=500, height=400");
+        window.open("test0105_popup2.html", "팝업2세", "width=300, height=200, left=100, top=100");
+        window.open("test0105_popup3.html", "팝업3세", "width=500, height=400 left=500, top=400");
+        
+        function openPop4(){ //서로 다른 컨텐츠를 팝업으로 띄우는 게 목표.
+            window.open("test0105_popup4.html", 
+            "팝업3세", "width=500, height=400 left=500, top=400");
+            //중복된 이름이 있으면 기존의 같은 이름을 대체해서 기존의 팝업창에 뜬다.
+        }
+    </script>
+</body>
+</html>

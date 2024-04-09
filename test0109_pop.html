@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadURL(url){
+            window.opener.location = url;//아빠의 주소에 내 주소를 넘겨줌.
+            window.close();//나는 아빠를 next로 연결시켜줬으니 이만 끝나겠다.
+        }
+    </script>
+</head>
+<body>
+    <a href="test0109_next.html" 
+    onclick="loadURL(this.href); return false;">다음 이벤트로 이동</a>
+<!-- return false는 a태그가 할 일을 못하게 하는 것. 정보만 loadURL에 넘겨주고, 이동은 하지 않는다. 그리고 아빠의 다음 위치에 넘겨줌.-->
+</body>
+</html>
+
+<!-- a 누르면 알아서 next로 가는 거 알겠는데, 거기 가지말고 onclick함수부터 먼저 해~
+나 loadURL 함수 실행했어~ 그러면 나 원래 하던 일 (a태그) 해?
+return false: 아니? 하지마.
+따라서 test0109정보만 넘겨주고 끝남. -->
