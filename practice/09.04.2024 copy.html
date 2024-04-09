@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item{
+            position: relative;
+            width: 600px;
+        }
+
+        #showBtn{
+            position: absolute;
+            left: 20px;
+            top: 350px;
+        }
+
+        #hideBtn{
+            display: none;
+            position: absolute;
+            left: 20px;
+            top: 350px;
+        }
+
+
+        #desc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="/img/새우구이.jpg" alt="shrimp">
+        <button id="showBtn" onclick="toggle()">상세 설명 보기</button>
+        <!-- <button id="hideBtn">상세 설명 접기</button> -->
+        <div id="desc">
+            <h1>새우 구이</h1>
+            <p>새우 구이는 정말로 맛있다. 왜냐면 정말로 맛있기 떄문이다.... 새우가 먹고 싶다. 초장에 찍어먹어도 정말 맛이 있다. 어쩜 그럴까..</p>
+        </div>
+    </div>
+
+    <script>
+        let event = false;
+
+        function toggle(){
+            if(event == false){
+                document.querySelector('#desc').style.display = "block";
+                document.querySelector('#showBtn').innerText = "상세 설명 보기";
+                event == true;
+            }else{
+                document.querySelector('#desc').style.display = "none";
+                event == false;
+                document.querySelector('#showBtn').innerText = "상세 설명 접기";
+            }
+        }
+    </script>
+</body>
+</html>

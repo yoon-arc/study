@@ -27,3 +27,4 @@ var num = [1, 2, 3, 4, 5];
 var newNum = num.slice(2, 4); //splice는 2번부터 2개~로 꺼내갔다면, slice는 2번부터 4번까지~ 이런 느낌.
 console.log(newNum); //
 console.log(num); //그치만 splice와 달리 원래 값에 영향을 주지 x
+

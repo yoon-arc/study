@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{list-style: none; display: flex; width: 300px; height: 100px; background-color: aqua;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">green</a></li>
+        <li><a href="#" onclick="changeBg('purple')">purple</a></li>
+    </ul>
+    <div id="result" style="width: 300px; height: 100px;">yes</div>
+
+    <script>
+        function changeBg(color){
+            var result = document.querySelector('#result');
+            result.style.backgroundcolor = color;
+        }
+    </script>
+</body>
+</html>
