@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    <p>공부할 주제를 선택해주세요</p>
+    <input type="text" name="" id="subject">
+    <button onclick="addP();">추가</button>
+    <button onclick="addP_reverse();">맨 위에 추가</button>
+    <div id="info"></div>
+
+
+    
+    <script>
+
+        function addP_reverse(){
+            let subject = document.getElementById("subject");
+            let newP = document.createElement("p");
+            let newTxt = document.createTextNode(subject.value);//input box의 값을 가져옴
+
+            newP.appendChild(newTxt);
+            document.getElementById("info").insertBefore(newP, info.childNodes[0]);
+            //childNodes [0]을 통해 마지막 값을 제일 위로
+            subject.value = '';//input에 있는값 지우기
+        }
+
+
+        function addP(){
+            let subject = document.getElementById("subject");
+            let newP = document.createElement("p");
+            let newTxt = document.createTextNode(subject.value);//input box의 값을 가져옴
+
+            newP.appendChild(newTxt);
+            document.getElementById("info").appendChild(newP);
+            subject.value = '';//input에 있는값 지우기
+        }
+
+    </script>
+</body>
+</html>

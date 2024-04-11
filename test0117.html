@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM에 P 추가하기.</h1>
+    <button onclick="addP(); this.onclick='';">새로운 p 추가하기</button>
+    <div id="info"></div>
+
+
+    <script>
+        var userInput = prompt("입력해주세요");
+        function addP(){
+            var newP = document.createElement("h2");
+            // var txtMode = document.createTextNode("바나나");
+            var txtMode = document.createTextNode(userInput);
+            //아직 element와 textnode가 연결되지 않은 상태.
+            //아래로 연결
+            newP.appendChild(txtMode);//부모랑 자식 붙임
+            document.getElementById("info").appendChild(newP);
+            //document애서 Info라는 이름의 Id에 newP라는 자식 들이기
+        }
+    </script>
+</body>
+</html>
