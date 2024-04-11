@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        #container{
+            display: flex; justify-content: space-between;
+            align-items: center; width: 400px; height: 600px;
+            border: 10px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>이미지 캐러셀입니다. 좌우 화살표 눌러 보세요</h1>
+    <div id="container">
+        <div class="arrow" id="left">&lang;</div>
+        <div class="arrow" id="right">&rang;</div>
+    </div>
+
+
+    <script>
+        const container = document.querySelector("#container");
+        const arrows = document.querySelector(".arrow"); //HTML의 요소들을 js에서 쓸 수 있도록 한 번 변환
+        const pics = ["img/용복1.jpg", "img/용복2.jpg", "img/용복3.jpg", "img/용복4.jpg"];
+        
+        container.style.backgroundImage = `url(${pics[0]})`;
+        container.style.backgroundSize = 'cover';
+
+        let i = 0;
+        //일반적 for문은 for(i = 0; i <pics.length; i++)을 통해 해야하는데, 어떻게보면 번거로움.
+        arrows.forEach( //arrows에 해당하는 각각의 요소들에게 모두 해당
+            arrow=>{ //화살표 함수
+                arrow.addEventListener('click', (event)=>{
+                    if(event.target.id === "left"){ //이전 그림
+                        i--;
+                        if(i < 0){i = pics.length -1; }
+                    }
+                    else if(event.target.id === "right"){ //다음 그림
+                        i++;
+                        if( i >= pics.length){ i = 0;}
+                    }
+                    container.style.backgroundImage = `url(${pics[i]})`;
+                })
+            }
+        );
+
+    </script>
+
+<!-- const container = document.querySelector('#container');
+const arrows = document.querySelectorAll('.arrow');
+const pics = [
+  'img/QWER.jpg',
+  'img/QWER2.jpg',
+  'img/QWER3.jpg',
+  'img/QWER4.jpg',
+  'img/QWER5.jpg',
+];
+container.style.backgroundImage = `url(${pics[0]})`
+container.style.backgroundSize = 'cover';
+let i = 0;
+arrows.forEach(
+  arrow =>{
+      arrow.addEventListener('click', (event)=>{
+          if(event.target.id ==='left'){ //이전그림
+              i--;
+              if(i < 0){i = pics.length -1}
+
+          }else if(event.target.id ==='right'){ //다음 그림
+              i++;
+              if(i >= pics.length){i=0;}
+          }
+           container.style.backgroundImage = `url(${pics[i]})`
+      })
+  }
+); -->
+</body>
+</html>
+
