@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="newjeans" src="img/뉴진스.jpg" alt="">
+    <p id="click"></p>
+    <p id="name"></p>
+    <button id="url" onclick="load()"></button>
+
+    <script>
+        var member;
+        document.getElementById("newjeans").addEventListener('click', 
+        (e)=>{document.getElementById("click").innerText = 
+            `event type: ${e.type}, x좌표:${e.pageX}, y좌표:${e.pageY}, 멤버:${member}`;
+            let x  = e.pageX;
+            let y = e.pageY;
+            if( (72 < x && x <214) && (106 < y && y < 289)){
+                document.getElementById("name").innerText = "다니엘";
+                document.getElementById("url").innerText = "이동하기";
+            }else{
+                document.getElementById("name").innerText = "멤버를 클릭하세요.";
+            }
+
+        })//if문 써서 제어하기
+
+        function load(){
+            window.open("http://www.naver.com")
+        }
+
+        
+
+        //(72,284) ~ (214, 289)
+    </script>
+</body>
+</html>
+
+<!-- 다니엘: x= 60~220 / 97 ~ 292
+혜린: x=232~376 / 145~322
+하니: x = 384~517 / 111~306
+혜인: 541~682 / 66~ 250
+민지: 724~879 / 76~273 -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="newjeans" src="img/뉴진스.jpg" alt="">
+    <p id="click"></p>
+
+    <script>
+        var member;
+        document.getElementById("newjeans").addEventListener('click', 
+        (e)=>{document.getElementById("click").innerText = 
+            `event type: ${e.type}, x좌표:${e.pageX}, y좌표:${e.pageY}, 멤버:${member}`;
+            
+            if(60 <= e <= 220){member = "다니엘";}
+            else if(232 <= e <= 376){member = "혜린";}
+            else if(384 <= e <= 517) member = "하니";
+            else if(541 <= e  <= 682) member = "혜인";
+            else if(724 <= e <= 879) member = "민지";
+
+        })//if문 써서 제어하기
+
+        
+
+
+    </script>
+</body>
+</html>
+
+<!-- 다니엘: x= 60~220 / 97 ~ 292
+혜린: x=232~376 / 145~322
+하니: x = 384~517 / 111~306
+혜인: 541~682 / 66~ 250
+민지: 724~879 / 76~273 -->

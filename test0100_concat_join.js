@@ -6,7 +6,7 @@ console.log(total);
 //서로 다른 배열을 합쳐서 새로운 배열을 형성.
 
 let phoneNum = ['010', '1234', '5678'];
-let phoneNumJoin = phoneNum.join("-");
+let phoneNumJoin = phoneNum.join("");
 console.log(phoneNumJoin);
 //join은 합쳐진 것들을 하나의 데이터로 만듦.
 //join인 애들을 전부 합쳐서 새로운 배열 x, 하나의 데이터 출력.
