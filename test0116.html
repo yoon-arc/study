@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .row{width: 380px; margin: auto;}
+        .row ul{list-style: none;}
+        .row li{display: inline;}
+        #lightBox{
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-color: rgba(0, 0, 0, 0.781);
+            display: none;
+        }
+        #lgtBox_img{
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="img/tree-1-thumb.jpg" data-src="img/tree-1.jpg" class="pic"></li>
+            <li><img src="img/tree-2-thumb.jpg" data-src="img/tree-2.jpg" class="pic"></li>
+            <li><img src="img/tree-3-thumb.jpg" data-src="img/tree-3.jpg" class="pic"></li>
+            <li><img src="img/tree-4-thumb.jpg" data-src="img/tree-4.jpg" class="pic"></li>
+            <li><img src="img/tree-5-thumb.jpg" data-src="img/tree-5.jpg" class="pic"></li>
+            <li><img src="img/tree-6-thumb.jpg" data-src="img/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightBox">
+        <img src="" alt="" id="lgtBox_img">
+    </div>
+
+    <script>
+        //바뀌는 이미지를 전부 onclick으로 하는 건, 나중에 데이터(사진) 수가 늘어났을 때를 반영하지 못함.
+        let pics = document.getElementsByClassName("pic");
+        let lightBoxImage = document.getElementById("lgtBox_img")
+        let lightBox = document.getElementById("lightBox");
+
+        function showLgtBox(){
+            let imgBig = this.getAttribute("data-src");
+            lightBoxImage.setAttribute("src", imgBig);
+            //this는 누군지 모르지만, 눌러진 것의 것.
+            lightBox.style.display = 'block';
+        }
+
+        for(let i = 0; i < 6; i++){
+            pics[i].addEventListener("click", showLgtBox);
+        }
+
+        lightBox.onclick = ()=>{
+            lightBox.style.display = 'none';
+        }
+
+   </script>
+</body>
+</html>
