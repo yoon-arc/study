@@ -59,6 +59,7 @@ console.log("arr1: ", arr1);
 console.log("arr2: ", arr2);
 
 //전개 구문을 통한 해결 -  배열 깊은 복사
+//한몸이 아닌, 전개 구문을 통해 독립적인 한개의 객체를 더 만드는 것.
 const array1 = [10,20,30];
 const array2 = [...array1].reverse();
 console.log("array1: ", array1);
