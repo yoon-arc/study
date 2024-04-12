@@ -29,8 +29,9 @@ function TextBook(title, price, major){
 TextBook.prototype.buyTextBook = function(){
     console.log(`${this.major}전공 책을 ${this.title}책을 ${this.price}원에 구매했어요`);}
 
-
 Object.setPrototypeOf(TextBook.prototype, Book.prototype); //prototype 연결, 상속
+
+
 const textbook1 = new TextBook('프론','20','디자인');
 textbook1.buy();
 textbook1.buyTextBook();
