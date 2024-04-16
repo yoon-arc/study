@@ -9,7 +9,7 @@ console.log(apple, banana);
 
 //
 
-let [apple2, banana2] = ["사과", "바나나"];
+let [apple2, banana2] = ["사과", "바나나"]; //할당
 
 console.log(apple2, banana2);
 
