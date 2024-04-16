@@ -22,6 +22,7 @@ for(key in student){ // for, in만 유의하고 나머지 값은 내맘.
     console.log(key + ":" + student[key]); 
     //key가 있어야만 student의 value값을 이용할 수 있음.
     //key는 고정된 값이 아님, key와 value의 순서만 지켜주면 됨.
+    //객체의 key를 둘러봄.
 }
 
 console.log(student[0]);
