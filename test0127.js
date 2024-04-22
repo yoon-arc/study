@@ -22,5 +22,7 @@ function Book(title, totalPages, nowPage=1){
 
 let book1 = new Book("프론트 기술", 200);
 let book2 = new Book("백엔드", 10, 2);
+let book3 = new Book("참을 수 없는 존재의 가벼움", 600 ,600);
 book1.read();
 book2.read();
+book3.read();

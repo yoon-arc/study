@@ -3,8 +3,8 @@
 let fruits = ["banana", "watermelon", "apple"];
 console.log(fruits); //전체 출력
 
-for (let i = 0; i < fruits.length; i++){
-    console.log(fruits[i]);
+for (let j = 0; j < fruits.length; j++){
+    console.log(fruits[j]);
 } // 인덱스로 접근할 때는 하나씩 출력
 
 
