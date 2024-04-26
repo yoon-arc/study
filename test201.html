@@ -1,0 +1,25 @@
+<!-- 파이썬 flask서버와 연결하기 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:5002/menu"> 
+        <!-- 나 action에 form에 있는 요소들 전송할 거야~ -->
+        <fieldset>
+            <label for="myorder">주문 가능한 메뉴</label>
+            <input type="hidden" value="너의 값이다">
+            <input type="text" id="myorder" name="query">
+            <input type="submit" value="주문">
+        </fieldset>
+
+        <!-- 여기서 /menu와 name="query"부분이 API임. 그럼 API란? -->
+    </form>
+</body>
+</html>
+
